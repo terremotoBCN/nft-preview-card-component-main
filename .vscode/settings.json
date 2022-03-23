@@ -1,0 +1,29 @@
+{
+    "livePreview.defaultPreviewPath": "/index.html",
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../css",
+            "savePathSegmentKeys": null,
+            "savePathReplaceSegmentsWith": null
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/../css",
+            "savePathSegmentKeys": null,
+            "savePathReplaceSegmentsWith": null
+        }
+    ],
+    "liveSassCompile.settings.watchOnLaunch": true,
+    "liveSassCompile.settings.excludeList": [
+        "/node_modules/**",
+        "/.vscode/**",
+        "/.history/**"
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}
