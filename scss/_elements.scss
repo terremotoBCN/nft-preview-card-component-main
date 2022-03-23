@@ -1,0 +1,8 @@
+/* 04 - ELEMENTS */
+// 04 - Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+
+html {
+	font-family: var(--font-family);
+	background-color: var(--bg-dark-blue);
+	color: var(--white);
+}

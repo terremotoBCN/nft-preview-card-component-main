@@ -1,0 +1,52 @@
+/* 01 - SETTINGS */
+// 01 - SETTINGS – used with preprocessors and contain font, colors definitions, etc.
+
+// IMPORT GOOGLE FONTS :: Outfit 300, 400, 600
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+// SASS VARS
+
+// ### Layout
+$layout-mobile: 375px;
+$layout-desktop: 1440px;
+
+$attribution-link: hsl(228, 45%, 44%);
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+$bg-dark-blue: hsl(217, 54%, 11%);
+$card-dark-blue: hsl(216, 50%, 16%);
+$line-dark-blue: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+// CUSTOM PROPERTIES
+
+:root {
+	// ### Layout
+	--layout-mobile: #{$layout-mobile};
+	--layout-desktop: #{$layout-desktop};
+
+	// ### Primary
+
+	--attribution-link: #{$attribution-link};
+	--soft-blue: #{$soft-blue};
+	--cyan: #{$cyan};
+
+	// ### Neutral
+
+	--bg-dark-blue: #{$bg-dark-blue};
+	--card-dark-blue: #{$card-dark-blue};
+	--line-dark-blue: #{$line-dark-blue};
+	--white: #{$white};
+
+	// ## Typography
+
+	--text-size: 18px;
+
+	// ### Font
+	--font-family: "Outfit", sans-serif;
+	--font-light: 300;
+	--font-regular: 400;
+	--font-semi-bold: 600;
+}
