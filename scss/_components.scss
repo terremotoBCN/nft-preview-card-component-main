@@ -1,0 +1,21 @@
+// COMPONENTS
+
+/*  Feel free to remove these styles or customise in your own stylesheet 👍   */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+
+	position: fixed;
+	bottom: 0px;
+	box-sizing: border-box;
+	width: 100vw;
+	display: block;
+	padding: 1em 2em;
+
+	background-color: var(--bg-dark-blue);
+	color: var(--white);
+
+	& a {
+		color: var(--cyan, $attribution-link);
+	}
+}

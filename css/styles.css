@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* 01 - SETTINGS */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  --layout-mobile: 375px;
+  --layout-desktop: 1440px;
+  --attribution-link: #3e52a3;
+  --soft-blue: #8bacda;
+  --cyan: #00fff7;
+  --bg-dark-blue: #0d192b;
+  --card-dark-blue: #14253d;
+  --line-dark-blue: #2f415b;
+  --white: white;
+  --text-size: 18px;
+  --font-family: "Outfit", sans-serif;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+}
+
+/* 02 - TOOLS */
+/* 03 - GENERIC */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* 04 - ELEMENTS */
+html {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark-blue);
+  color: var(--white);
+}
+
+/* 05 - OBJECTS*/
+/*  Feel free to remove these styles or customise in your own stylesheet 👍   */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
+  display: block;
+  padding: 1em 2em;
+  background-color: var(--bg-dark-blue);
+  color: var(--white);
+}
+.attribution a {
+  color: var(--cyan, #3e52a3);
+}/*# sourceMappingURL=styles.css.map */
