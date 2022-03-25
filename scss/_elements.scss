@@ -1,8 +1,35 @@
 /* 04 - ELEMENTS */
 // 04 - Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
 
-html {
+html,
+body {
 	font-family: var(--font-family);
 	background-color: var(--bg-dark-blue);
+	// background-image: repeating-linear-gradient(
+	// 	0deg,
+	// 	var(--bg-dark-blue) 25%,
+	// 	var(--bg-dark-blue) 50%,
+	// 	darken($bg-dark-blue, $amount: 0.5%) 50%,
+	// 	darken($bg-dark-blue, $amount: 0.5%) 75%
+	// );
+	// background-size: 20px 20px;
+
 	color: var(--white);
+
+	height: 100%;
+
+	min-height: 100vh;
+}
+
+// body {
+// 	background-image: url(../design/desktop-design.jpg);
+// 	background-position: 50% 50%;
+// }
+
+a {
+	color: var(--attribution-link);
+
+	&:hover {
+		color: var(--card-light-blue);
+	}
 }

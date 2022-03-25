@@ -17,8 +17,26 @@ $cyan: hsl(178, 100%, 50%);
 
 $bg-dark-blue: hsl(217, 54%, 11%);
 $card-dark-blue: hsl(216, 50%, 16%);
-$line-dark-blue: hsl(215, 32%, 27%);
+$card-light-blue: hsl(216, 35%, 70%);
+$line-dark-blue: hsla(215, 32%, 27%, 1);
 $white: hsl(0, 0%, 100%);
+
+$text-size: 18px;
+
+// ### Font
+$font-family: "Outfit", sans-serif;
+$font-light: 300;
+$font-regular: 400;
+$font-semi-bold: 600;
+
+$font-weights: (
+	"light": 300,
+	"regular": 400,
+	"semi-bold": 600,
+);
+
+// components
+$card-corners: 20px;
 
 // CUSTOM PROPERTIES
 
@@ -37,16 +55,20 @@ $white: hsl(0, 0%, 100%);
 
 	--bg-dark-blue: #{$bg-dark-blue};
 	--card-dark-blue: #{$card-dark-blue};
+	--card-light-blue: #{$card-light-blue};
 	--line-dark-blue: #{$line-dark-blue};
 	--white: #{$white};
 
 	// ## Typography
 
-	--text-size: 18px;
+	--text-size: #{$text-size};
 
 	// ### Font
-	--font-family: "Outfit", sans-serif;
-	--font-light: 300;
-	--font-regular: 400;
-	--font-semi-bold: 600;
+	--font-family: #{$font-family};
+	--font-light: #{$font-light};
+	--font-regular: #{$font-regular};
+	--font-semi-bold: #{$font-semi-bold};
+
+	// ### Components
+	--card-corners: #{$card-corners};
 }

@@ -11,34 +11,61 @@
 
   <title>Frontend Mentor | NFT preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
 
-  Equilibrium #3429
+  <main class="content">
+    <div id="Equilibrium-3429" class="nft-card">
+      <div class="nft-card__banner" title="Equilibrium #3429">
+        <a href="#">
 
-  Our Equilibrium collection promotes balance and calm.
+          <img class="nft-card__image" src="./images/image-equilibrium.jpg" alt="Equilibrium #3429">
+        </a>
+      </div>
+      <!-- /// .nft-card__piece -->
 
-  0.041 ETH
-  3 days left
+      <h2 class="nft-card__name">
+        <a href="#">
+          Equilibrium <span>#3429</span>
+        </a>
+      </h2>
+      <!-- /// .nft-card__name -->
 
-  Creation of Jules Wyvern
+      <p class="nft-card__description">Our Equilibrium collection promotes balance and calm.</p>
+      <!-- /// .nft-card__description -->
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="nft-card__data">
+        <div class="nft-card__price nft-card__price--ETH">0.041 ETH</div>
+        <!-- /// .nft-card__price -->
+
+        <div class="nft-card__expiration">3 days left</div>
+        <!-- /// .nft-card__expiration -->
+
+        <div class="nft-card__author">
+          <img src="./images/image-avatar.png" alt="Jules Wyvern" />
+          Creation of <a href="#">Jules Wyvern</a>
+        </div>
+        <!-- /// .nft-card__author -->
+
+      </div>
+      <!-- /// .nft-card__data -->
+
+    </div>
+    <!-- /// #nft-card.nft-card -->
+
+  </main>
+  <!-- /// #content -->
+
+  <!-- ATTRIBUTION -->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      title="frontendmentor.io">Frontend Mentor</a>.
+    -
+    Coded by <a href="https://github.com/terremotoBCN" target="_blank" title="github.com">TerremotoBCN</a>.
+  </footer>
+  <!-- /// .attribution-->
+
 </body>
 
 </html>

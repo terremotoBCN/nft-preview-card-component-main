@@ -1,5 +1,204 @@
-// COMPONENTS
+/* 06 - COMPONENTS */
+// 06 - Components – specific UI components. This is where most of our work takes place.
+// 		often compose UI components of Objects and Components
 
+/* MAIN CONTENT */
+.content {
+	box-sizing: border-box;
+	padding: 1em;
+
+	min-height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+/* NFT CARD */
+.nft-card {
+	display: block;
+	background-color: var(--card-dark-blue);
+
+	border-top: 0.05rem solid $line-dark-blue;
+	border-right: 0.05rem solid darken($card-dark-blue, $amount: 2%);
+	border-left: 0.05rem solid $line-dark-blue;
+	border-bottom: 0.05rem solid darken($card-dark-blue, $amount: 2%);
+
+	border-radius: var(--card-corners);
+	max-width: 350px;
+	padding: 25px;
+
+	line-height: 1.6em;
+	box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.1),
+		0 0 40px -5px scale-color($cyan, $alpha: -100%),
+		0 0 10px -5px scale-color($cyan, $alpha: -100%);
+
+	opacity: 1;
+
+	transform: translate(0, 0);
+	transition: box-shadow 660ms cubic-bezier(0, 1, 0.66, 1),
+		transform 660ms cubic-bezier(0, 1, 0.66, 1);
+
+	& a {
+		color: var(--white);
+		text-decoration: none;
+		transition: color 666ms cubic-bezier(0, 1, 0.66, 1);
+
+		&:hover {
+			color: var(--cyan);
+			// clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+			// background-color: #fff;
+
+			text-shadow: 0 0 2px rgba(255, 255, 255, 0.75);
+		}
+	}
+
+	&:hover {
+		box-shadow: 0px 35px 15px 0px rgba(0, 0, 0, 0.1),
+			0 0 40px -5px scale-color($cyan, $alpha: -75%),
+			0 0 10px -5px scale-color($cyan, $alpha: -25%);
+		// 	opacity: 0.1;
+		transform: translate(0, -0.5em);
+
+		// & img {
+		// 	opacity: 1;
+		// }
+	}
+
+	&__banner {
+		aspect-ratio: 1/1;
+		height: 300px;
+		width: 300px;
+		box-sizing: border-box;
+		overflow: hidden;
+		position: relative;
+
+		border-top: 0.05rem solid darken($card-dark-blue, $amount: 2%);
+		border-right: 0.05rem solid $line-dark-blue;
+		border-bottom: 0.05rem solid $line-dark-blue;
+		border-left: 0.05rem solid darken($card-dark-blue, $amount: 2%);
+		border-radius: $card-corners / 2;
+
+		background-color: var(--bg-dark-blue);
+		box-shadow: inset 0px 0px 6px 3px rgba(0, 0, 0, 0.6);
+
+		&::after {
+			transition: all 666ms cubic-bezier(0, 1, 0.66, 1);
+			content: " ";
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			cursor: pointer;
+			background-color: scale-color($cyan, $alpha: -66%);
+			// background-color: $cyan;
+			background-image: url(../images/icon-view.svg);
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			opacity: 0;
+		}
+		&:hover::after {
+			z-index: 10;
+			opacity: 0.75;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		z-index: 1;
+		opacity: 0.85;
+		transition: transform 333ms cubic-bezier(0, 1, 0.66, 1),
+			opacity 333ms cubic-bezier(0, 1, 0.66, 1);
+		transform: scale(1);
+		&:hover {
+			opacity: 1;
+			transform: scale(1.1);
+		}
+		min-height: 300px;
+		min-width: 300px;
+		aspect-ratio: 1 / 1;
+		// display: none;
+	}
+
+	&:hover &__image {
+		transform: scale(1.1);
+		opacity: 1;
+	}
+
+	&__name {
+		font-size: 1.4em;
+		font-weight: var(--font-semi-bold);
+		margin: 1em auto;
+	}
+
+	&__description {
+		font-weight: var(--font-light);
+		color: var(--card-light-blue);
+		font-size: 1.1em;
+		margin: 1em auto;
+	}
+
+	&__data {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: stretch;
+		gap: 1.2em;
+	}
+
+	&__price {
+		color: var(--cyan);
+		font-weight: var(--font-semi-bold);
+
+		&--ETH {
+			min-height: 18px;
+			padding-left: 20px;
+			background-image: url("../images/icon-ethereum.svg");
+			background-repeat: no-repeat;
+			background-position: 0 50%;
+		}
+	}
+
+	&__expiration {
+		min-height: 18px;
+		color: var(--card-light-blue);
+		padding-left: 26px;
+		background-image: url("../images/icon-clock.svg");
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+	}
+
+	&__author {
+		border-top: 1px solid var(--line-dark-blue);
+		padding-top: 1em;
+		width: 100%;
+		flex-grow: 2;
+
+		// margin: 1em auto;
+
+		color: var(--card-light-blue);
+		& span {
+			color: var(--white);
+		}
+		& img {
+			display: inline;
+			box-sizing: border-box;
+			border: 1px solid var(--white);
+			border-radius: 100%;
+			width: 32px;
+			height: 32px;
+			vertical-align: middle;
+			line-height: var(--text-size);
+			margin-right: 12px;
+		}
+	}
+}
+
+/* ATTRIBUTION */
 /*  Feel free to remove these styles or customise in your own stylesheet 👍   */
 .attribution {
 	font-size: 11px;
@@ -12,10 +211,10 @@
 	display: block;
 	padding: 1em 2em;
 
-	background-color: var(--bg-dark-blue);
-	color: var(--white);
+	background-color: color.scale($card-dark-blue, $alpha: -66%);
+	color: $line-dark-blue;
 
 	& a {
-		color: var(--cyan, $attribution-link);
+		color: $card-light-blue;
 	}
 }
