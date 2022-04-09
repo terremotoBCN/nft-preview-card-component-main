@@ -5,6 +5,8 @@
 		}
 	],
 	"settings": {
+		"editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+		"editor.fontLigatures": true,
 		"livePreview.defaultPreviewPath": "/index.html",
 		"liveSassCompile.settings.watchOnLaunch": true,
 		"liveSassCompile.settings.formats": [
